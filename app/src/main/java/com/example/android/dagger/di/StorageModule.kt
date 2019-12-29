@@ -6,6 +6,15 @@ import com.example.android.dagger.storage.Storage
 import dagger.Module
 import dagger.Provides
 
+
+//@Retention(AnnotationRetention.BINARY)
+//@Qualifier
+//annotation class RegistrationStorage
+//
+//@Retention(AnnotationRetention.BINARY)
+//@Qualifier
+//annotation class LoginStorage
+
 // Tells Dagger this is a Dagger module
 @Module
 class StorageModule {
@@ -25,5 +34,17 @@ class StorageModule {
         // this code (the one inside the @Provides method) will be run.
         return SharedPreferencesStorage(context)
     }
+
+//    @RegistrationStorage
+//    @Provides
+//    fun provideRegistrationStorage(context: Context): Storage {
+//        return SharedPreferencesStorage("registration", context)
+//    }
+//
+//    @LoginStorage
+//    @Provides
+//    fun provideLoginStorage(context: Context): Storage {
+//        return SharedPreferencesStorage("login", context)
+//    }
 
 }
